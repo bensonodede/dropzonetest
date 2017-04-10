@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Confirm delivery</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+
+
+    <!-- DEVELOPER NOTE: static 'confirm.js' file does not serve on express, work on fix -->
+<!--    <script src="js/confirm.js" charset="utf-8"></script>  -->
+
+  </head>
+  <body>
+
+    <h1>Nothing to see here</h1>
+
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+  var socket = io();
+
+  window.onload = function() {
+
+      /********************* GET ADDRESS ******************/
+
+      //Geolocation function
+   function lat(callback) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          {
+            enableHighAccuracy: true;
+          }
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            callback.call(null, lat, lon);
+        }, function(error) {
+            alert("Please check your location settings and try again.")
+            console.log("Something went wrong: ", error);
+        });
+    }
+
+
+      function locateme() {
+          lat(function(latitude, longitude) {
+              var lat = latitude.toString();
+              var lon = longitude.toString();
+              var address = (lat + ', ' + lon);
+              console.log(address);
+              socket.emit('dropoff', {
+                address: address
+              });
+          });
+      }
+      locateme();
+  }
+
+  socket.on('expired', function(data){
+    console.log(data.status);
+    window.location.href = "number.html";
+  });
+
+
+
+  </script>
+
+</html>

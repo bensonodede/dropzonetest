@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=.8'>
+  <meta name="description" content="Online on-demand delivery service in Nairobi, Kenya. Just upload a picture of the item and tap send.">
+  <meta name="keywords" content="delivery, send, package delivery, item delivery, parcel delivery, address ">
+  <title>Dropzone- Sign up</title>
+  <link rel="icon" href="images/dropzone-favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700" rel="stylesheet">
+  <link href="https://fontastic.s3.amazonaws.com/YKLiEB5nKeTck7NdBGoGKY/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/signup.css">
+
+  <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+
+
+</head>
+
+<body>
+  <div class="toaster"></div>
+
+<main class="wrapper">
+  <section class="section-form">
+    <h1>Create account</h1>
+
+
+    <form name="signup" class="form" novalidate>
+      <div class="form-group" style="padding-top: 15px;">
+        <label for="name" class="form-label ">
+          Full Name:
+        </label>
+
+        <div class="form-addon" data-states-for="name">
+          <div class="form-addon__addon">
+            <span class="icon-name"></span>
+          </div>
+
+          <input type="text"
+                 id="username"
+                 name="name"
+                 class="form-input"
+                 placeholder="John Doe"
+                 pattern="([a-zA-Z\-]+){2,}\s+([a-zA-Z\-]+){2,}"
+                 required>
+
+          <span class="form-addon__icon icon-valid"></span>
+          <span class="form-addon__icon icon-invalid"></span>
+        </div>
+
+        <div data-errors-for="name">
+          <small class="form-error"
+                 data-errors-when="valueMissing">
+            This field is required.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label ">
+          Email:
+        </label>
+
+        <div class="form-addon" data-states-for="email">
+          <div class="form-addon__addon">
+            <span class="icon-email"></span>
+          </div>
+
+          <input type="email"
+                 id="useremail"
+                 name="email"
+                 class="form-input"
+                 placeholder="johndoe@email.com"
+                 required>
+
+          <span class="form-addon__icon icon-valid"></span>
+          <span class="form-addon__icon icon-invalid"></span>
+        </div>
+
+        <div data-errors-for="email">
+          <small class="form-error"
+                 data-errors-when="valueMissing">
+            This field is required.
+          </small>
+
+          <small class="form-error"
+                 data-errors-when="typeMismatch">
+            Please enter a valid email address.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone" class="form-label">
+          Phone number:
+        </label>
+
+        <div class="form-addon" data-states-for="phone">
+          <div class="form-addon__addon">
+            <span class="icon-phone"></span>
+          </div>
+
+          <input type="text"
+                 id="usernumber"
+                 name="phone"
+                 class="form-input"
+                 placeholder="0712345678"
+                 pattern="[0-9]{10}"
+                 required>
+
+          <span class="form-addon__icon icon-valid"></span>
+          <span class="form-addon__icon icon-invalid"></span>
+        </div>
+
+        <div data-errors-for="phone">
+          <small class="form-error"
+              data-errors-when="valueMissing">
+          This field is required.
+        </small>
+
+          <small class="form-error"
+                 data-errors-when="patternMismatch">
+            Please enter a valid phone number.
+          </small>
+
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">
+          Password <span class="text-muted">(minimum 6 characters)</span>:
+        </label>
+
+        <div class="form-addon" data-states-for="password">
+          <div class="form-addon__addon">
+            <span class="icon-password"></span>
+          </div>
+
+          <input type="password"
+                 id="userpass"
+                 name="password"
+                 class="form-input"
+                 placeholder="********"
+                 minlength="6"
+                 required>
+
+          <span class="form-addon__icon icon-valid"></span>
+          <span class="form-addon__icon icon-invalid"></span>
+        </div>
+
+        <div data-errors-for="password">
+          <small class="form-error"
+                 data-errors-when="valueMissing">
+            This field is required.
+          </small>
+
+          <small class="form-error"
+                 data-errors-when="tooShort">
+            Your password should be at least 6 characters long.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <button type="submit" class="button" id="btnSignUp">Sign up</button>
+        <div class="account" style="padding-right: 0px; padding-top: 10px; color: #efefef;">
+          <p1>Already have an account?<span style="font-weight: 700;"><a href="login.html"> Log in</a></span></p1>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>
+  <script type="text/javascript" src="js/GentleForm.js"></script>
+
+    <script src="js/signup.js"></script>
+
+</body>
+</html>

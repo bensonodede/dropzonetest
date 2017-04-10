@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:
+
+Sitemap: https://dropzoneapp.herokuapp.com/sitemap.html

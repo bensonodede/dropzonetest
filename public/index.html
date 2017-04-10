@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=.8'>
+  <title>Dropzone Kenya- On-demand delivery  for online sellers.</title>
+  <meta name="description" content="There's a new way to move things. You get a permanent address you can use to send or receive items. Upload a picture of the item, enter the destination address and tap send.">
+  <meta name="keywords" content="delivery, send, package delivery, item delivery, parcel delivery, address ">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <link rel="icon" href="images/dropzone-favicon.png" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700,500' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"> <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/normalize.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap Grid -->
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="css/animate.min.css"><!-- Animate -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <link rel="stylesheet" href="css/magnific-popup.css"> <!-- Resource style -->
+
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/planets.css">
+  <link rel="stylesheet" href="css/glowing-meteor.css">
+  <link rel="stylesheet" href="css/moon-and-sea.css">
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-94029221-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <!--****************************** MY MAP ***************************-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='https://js.arcgis.com/3.14/esri/css/esri.css'>
+  <link rel="stylesheet" href="css/map.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+  <script src="js/firebase.js" charset="utf-8"></script>
+
+  <!-- Start of Async Drift Code -->
+  <script>
+    !function() {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+      t.factory = function(e) {
+        return function() {
+          var n;
+          return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e, n, o, i;
+        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+      });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('84n3es628e3x');
+  </script>
+  <!-- End of Async Drift Code -->
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <header id="main-nav" style="z-index: 100;">
+    <div class="container">
+
+      <a id="navigation" href="#"><i class="fa fa-bars"></i></a>
+
+      <div id="slide_out_menu">
+        <a href="#customers" class="menu-close"><i class="fa fa-times"></i></a>
+        <div class="logo"><img src="images/dropzone-logo-white.png" alt="dropzone-kenya-logo"></div>
+        <ul>
+          <li><a href="#iphone-screens">My address</a></li>
+          <li><a href="#features">Features</a></li>
+          <li id="loginLink1"><a href="login.html">Log in</a></li>
+          <li id="signupLink1"><a href="signup.html">Sign up</a></li>
+          <li id="logoutLink1"><a href="login.html">Log out</a></li>
+          <li id="senditem1"><a href="send.html">Send item</a></li>
+        </ul>
+
+        <div class="slide_out_menu_footer">
+          <!--
+          <div class="more-info">
+            <p>Made with love by <a href="http://getcraftwork.com">Craft Work</a></p>
+            <p>Developed by <a href="http://ruibogasdesign.net/">Rui Bogas</a>
+          </div>
+        -->
+          <ul class="socials">
+            <li><a href="https://twitter.com/dropzoneke" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/dropzonekenya/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/dropzonekenya/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <!--
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <ul class="left">
+            <li><a href="#iphone-screens">My address</a></li>
+            <li><a href="#features">Features</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center">
+          <a href="#customers" class="logo"><img src="images/dropzone-logo.png" alt="New Providence"></a>
+        </div>
+        <div class="col-md-4">
+          <ul class="right" style="padding-top: 10px;">
+              <li id="logoutLink"><a href="login.html">Log out</a></li>
+              <li id="loginLink"><a href="login.html">Log in</a></li>
+              <li id="signupLink"><a href="signup.html">Sign up</a></li>
+              <li id="senditem"><a href="send.html">Send item</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header><!-- //Main Nav -->
+
+
+
+
+<!-- ********************* COVER ************************ -->
+
+<section id="customers">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h2 class="wow fadeInUp">Delivery made simple.</h2>
+        <p class="wow fadeInUp cover" style="padding-bottom: 50px;">
+          Whether you want to send an item to your customers or a small gift to grandma,
+          we believe that moving stuff should be a lot easier.
+        </p>
+
+        <a href="#iphone-screens" id="getstarted" class="button" style="font-size:18px; height:48px; text-decoration: none;"> Get started </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- *********************  ADDRESS ************************
+
+
+<section id="iphone-screens">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 id="w3w" class="wow fadeInUp"><strong></strong></h2>
+        <h4 class="subtitle">What does that mean?</h4>
+        <p class="wow fadeInUp cover">
+          It's your very own address. <strong  style="color: black;">Type</strong> it in the<strong style="color: black;"> search box below </strong>to confirm.
+        </p>
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+      <div id="address">
+        <div id="map">
+          <div id="search"></div>
+        </div>
+      </div>
+
+-->
+
+
+      <section id="iphone-screens">
+
+
+          <section class="section slider">
+
+            <div class="section__entry section__entry--center">
+              <h1 class="section__title heading-2 heading-2--black">How it works</h1>
+              <p class="section__text text text--light-black">
+                We use teleportation.
+              </p>
+            </div>
+
+          	<input type="radio" name="slider" id="slide-1" class="slider__radio" checked>
+          	<input type="radio" name="slider" id="slide-2" class="slider__radio">
+          	<input type="radio" name="slider" id="slide-3" class="slider__radio">
+
+
+          	<div class="slider__holder">
+
+          		<label for="slide-1" class="slider__item slider__item--1 card">
+                <div class="slider__item-content">
+
+
+
+
+
+                  <div class="night-sky moonlight">
+                	<ul>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                	</ul>
+
+                	<div class="stars moonlight">
+                		<div class="moonlight"></div><div class="moonlight"></div><div class="moonlight"></div>
+                	</div>
+
+                	<div class="stars moonlight">
+                		<div class="moonlight"></div><div class="moonlight"></div><div class="moonlight"></div>
+                	</div>
+
+                	<div class="stars moonlight">
+                		<div class="moonlight"></div><div class="moonlight"></div><div class="moonlight"></div>
+                	</div>
+
+                	<div class="stars moonlight">
+                		<div class="moonlight"></div><div class="moonlight"></div><div class="moonlight"></div>
+                	</div>
+                	<div class="clouds moonlight">
+                		<div class="moonlight"></div>
+                		<div class="moonlight"></div>
+                		<div class="moonlight"></div>
+                		<div class="moonlight"></div>
+                	</div>
+
+                	<div class="clouds moonlight">
+                		<div class="moonlight"></div>
+                		<div class="moonlight"></div>
+                		<div class="moonlight"></div>
+                		<div class="moonlight"></div>
+                	</div>
+                </div class="moonlight">
+                <div class="moon moonlight">
+                	<ul>
+                		<li class=""></li>
+                		<li class=""></li>
+                		<li class=""></li>
+                	</ul>
+                </div>
+
+                <div class="sea-horizon moonlight">
+                	<div class="sea-shine moonlight">
+                		<ul>
+                			<li class=""></li>
+                			<li class=""></li>
+                			<li class=""></li>
+                      <li class=""></li>
+
+                			<li class=""></li>
+                			<li class=""></li>
+                			<li class=""></li>
+                			<li class=""></li>
+
+                			<li class=""></li>
+                			<li class=""></li>
+
+                			<li class=""></li>
+                			<li class=""></li>
+                		</ul>
+                	</div>
+                </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div class="heading-3 heading-3--light" >
+                  <h2 style="font-size: 25px; padding-bottom:2px; padding-top:20px;">Rest easy</h2>
+                  <p>
+                    Just enter their phone number and <br> We'll send them a special link.
+                  </p>
+
+                  <label for="slide-2" class="button">Next </label>
+                </div>
+          		</label> <!-- Slider__item -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          		<label for="slide-2" class="slider__item slider__item--2 card">
+                <div class="slider__item-content">
+
+                  <div class="dem-planets">
+
+                    <div class="stars-container">
+                      <div class="stars">
+                        <div></div><div></div><div></div>
+                      </div>
+                      <div class="stars">
+                        <div></div><div></div><div></div>
+                      </div>
+                      <div class="stars">
+                        <div></div><div></div><div></div>
+                      </div>
+                      <div class="stars">
+                        <div></div><div></div><div></div>
+                      </div>
+                      <div class="stars-2"></div>
+                      <div class="stars-2"></div>
+                      <div class="stars-2"></div>
+                    </div>
+
+                    <div class="moon-planet"></div>
+
+                    <div class="planet-container">
+                      <div class="planet-ring2"></div>
+                      <div class="planet"></div>
+                      <div class="shine"></div>
+                      <div class="shine-2"></div>
+                      <div class="planet-ring"></div>
+                      <div class="planet-crater"></div>
+                    </div>
+
+                    <div class="meteor-container">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+
+
+                    <div class="meteor-container-2">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+
+                  </div>
+
+
+
+              </div>
+                  <div class="heading-3 heading-3--light">
+                    <h2 style="font-size: 25px; padding-bottom:20px; padding-top:20px;">No matter where you are</h2>
+                    <p>
+                      Once they confirm, we <br>will come and pick up the item.
+                    </p>
+
+                    <label for="slide-3" class="button">Next </label>
+
+                  </div>
+
+          		</label> <!-- Slider__item -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          		<label for="slide-3" class="slider__item slider__item--3 card">
+                <div class="slider__item-content">
+
+
+                  <div class="first glow">
+                	<ul>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                	</ul>
+                </div>
+                <div class="second glow">
+                	<ul>
+                		<li></li>
+                		<li></li>
+                	</ul>
+                </div>
+                <div class="third glow">
+                	<ul>
+                		<li></li>
+                		<li></li>
+                		<li class="floating-1"></li>
+                		<li class="floating-1"></li>
+                		<li class="floating-2"></li>
+                		<li class="floating-2"></li>
+                	</ul>
+                </div>
+                <div class="fourth glow">
+                	<ul>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                		<li class="floating"></li>
+                		<li class="floating"></li>
+                		<li class="floating"></li>
+                		<li class="floating"></li>
+                	</ul>
+                	<span class="smile"></span>
+                	<span class="eyes"></span>
+                	<span class="cheeks"></span>
+                </div>
+
+                <div class="random-stars-container glow">
+                	<span class="random-stars"></span>
+                	<span class="random-stars"></span>
+                	<span class="random-stars"></span>
+                	<span class="random-stars"></span>
+                </div>
+                  <script src='https://code.createjs.com/createjs-2015.11.26.min.js'></script>
+                <script src='https://code.createjs.com/easeljs-0.8.2.min.js'></script>
+                <script src='https://code.createjs.com/tweenjs-0.6.2.min.js'></script>
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+
+
+              </div>
+
+                <div class="heading-3 heading-3--light">
+                  <h2 style="font-size: 25px; padding-bottom:20px; padding-top:20px;">We'll deliver</h2>
+                  <p>
+                    Stop giving directions over the phone.<br>We'll know where to find them.
+                  </p>
+
+                  <a href="#ready-to-buy" class="button">Done</a>
+
+                </div>
+
+          		</label> <!-- Slider__item -->
+
+
+
+
+          	</div> <!-- Slider Holder -->
+
+            <div class="bullets">
+              <label for="slide-1" class="bullets__item bullets__item--1"></label>
+              <label for="slide-2" class="bullets__item bullets__item--2"></label>
+            	<label for="slide-3" class="bullets__item bullets__item--3"></label>
+            </div> <!-- Bullets -->
+
+
+          </section> <!-- Section Slider -->
+
+
+
+
+      </section>
+
+
+
+
+
+<!-- ********************* FEATURES ************************ -->
+
+
+<section id="features">
+<div class="container">
+<div class="row">
+<div class="col-md-6 feature-item">
+<div class="feature wow fadeInUp">
+  <div class="f-icon"><i class="lnr lnr-map-marker"></i></div>
+  <div class="f-description">
+    <h4>Get your own address</h4>
+    <p>3 words are significantly more memorable than the equivalent latitude/longitude coordinates required to define the same location. </p>
+    </div>
+  </div>
+</div>
+<div class="col-md-6 feature-item">
+  <div class="feature wow fadeInUp" data-wow-delay=".1s">
+    <div class="f-icon"><i class="lnr lnr-clock"></i></div>
+    <div class="f-description">
+      <h4>Same-day delivery</h4>
+      <p>No more wasting time. We deliver your goods within minutes. Give us a try, you won't regret it.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="container" style="padding-top: 70px;">
+<div class="row">
+  <div class="col-md-6 feature-item">
+    <div class="feature wow fadeInUp">
+      <div class="f-icon"><i class="lnr lnr-smile"></i></div>
+      <div class="f-description">
+        <h4>We will pick it up</h4>
+        <p>Don't lift a finger, we'll come and get it.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 feature-item">
+      <div class="feature wow fadeInUp" data-wow-delay=".1s">
+        <div class="f-icon"><img src="images/kenya 64.png" alt="kenya-flag"></div>
+        <div class="f-description">
+          <h4>We are in <strong>Nairobi</strong></h4>
+          <p>Currently rooted in one of the greatest cities in Africa, we deliver to and from anywhere in Nairobi.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ********************* REDIRECT ************************ -->
+
+
+
+<section id="ready-to-buy">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>First delivery is <b>free</b></p>
+        <h2> Try it now </h2>
+        <form action="">
+
+        </form>
+        <div class="download-btn">
+            <span>
+              <a href="signup.html" class="btn btn-green">Sign Up <i class="fa fa-arrow-right"></i></a>
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- //Ready to Buy -->
+
+
+<!-- ********************* FOOTER ************************ -->
+
+
+
+<footer id="footer">
+  <div class="container footer-container">
+    <div class="row">
+      <div class="col-md-3">
+        <img class="logo" src="images/dropzone-logo.png" alt="dropzone-logo">
+        <p>
+          Don't be shy, send us a message.
+        </p>
+        <ul class="socials">
+          <li><a href="https://twitter.com/dropzoneke" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.facebook.com/dropzonekenya/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/dropzonekenya/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        <!--  <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share">Share via Whatsapp</a>
+        -->
+
+          <!--
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+          <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        -->
+        </ul>
+      </div>
+      <!--
+      <div class="col-md-2 col-md-offset-3 col-sm-4 col-xs-6 footer-links">
+        <ul>
+          <li><p class="title">Learn More</p></li>
+          <li><a href="#">How it works?</a></li>
+          <li><a href="#">Meeting tools</a></li>
+          <li><a href="#">Live striming</a></li>
+          <li><a href="#">Contat method</a></li>
+        </ul>
+      </div>
+    -->
+      <div class="col-md-2 col-md-offset-5 col-sm-4 col-xs-6 footer-links">
+        <ul>
+          <li><p class="title">About Us</p></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Work with us</a></li>
+          <!--
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Privacy police</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        -->
+        </ul>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 footer-links">
+        <ul>
+          <li><p class="title">Contact us</p></li>
+          <li><p>dropzoneke@gmail.com</p></li>
+          <li><p>+254724645546</p></li>
+          <!--
+          <li><a href="#">F.A.Q.</a></li>
+          <li><a href="#">Live chat</a></li>
+          <li><a href="#">Phone call</a></li>
+        -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<!--
+
+  <div class="container copyright-container">
+    <div class="row">
+      <div class="col-md-6 text-left">
+        <div class="more-info">
+          For more freebies visit: <a href="http://getcraftwork.com">http://getcraftwork.com</a>
+        </div>
+      </div>
+      <div class="col-md-6 text-right">
+        <div class="made-by">Made with Love by <a href="http://getcraftwork.com" target="_blank"><img src="images/craftwork.png" alt=""></a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+-->
+
+
+
+
+
+ <!--**********************MAP SCRIPTS*********************-->
+ <script src='//js.arcgis.com/3.14/'></script>
+ <script src="js/map.js"></script>
+
+
+  <script src="js/logout.js"></script>
+  <script src="js/jquery-2.1.4.min.js"></script> <!-- jQuery -->
+  <script src="js/bootstrap.min.js"></script>  <!-- Bootstrap -->
+  <script src="js/wow.min.js"></script>  <!-- wow -->
+  <script src="js/jquery.magnific-popup.min.js"></script>  <!-- wow -->
+  <script src="js/main.js"></script>  <!-- Main Script -->
+</body>
+</html>

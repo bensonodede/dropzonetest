@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=.8'>
+  <meta name="description" content="Online on-demand delivery service in Nairobi, Kenya. Just upload a picture of the item and tap send.">
+  <meta name="keywords" content="delivery, send, package delivery, item delivery, parcel delivery, address ">
+  <title>Dropzone- Login</title>
+  <link rel="icon" href="images/dropzone-favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700" rel="stylesheet">
+  <link href="https://fontastic.s3.amazonaws.com/YKLiEB5nKeTck7NdBGoGKY/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/signup.css">
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-94029221-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+
+
+  <!-- Start of Async Drift Code -->
+  <script>
+    !function() {
+      var t;
+      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+      t.factory = function(e) {
+        return function() {
+          var n;
+          return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e, n, o, i;
+        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+      });
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('84n3es628e3x');
+  </script>
+  <!-- End of Async Drift Code -->
+
+
+</head>
+
+<body>
+  <div class="toaster"></div>
+
+<main class="wrapper">
+  <section class="section-form">
+    <h1>Log in</h1>
+
+
+    <form name="signup" class="form" novalidate>
+
+
+      <div class="form-group">
+        <label for="email" class="form-label ">
+          Email:
+        </label>
+
+        <div class="form-addon" data-states-for="email">
+          <div class="form-addon__addon">
+            <span class="icon-email"></span>
+          </div>
+
+          <input type="email"
+                 id="useremail"
+                 name="email"
+                 class="form-input"
+                 placeholder="johndoe@email.com"
+                 required>
+
+
+        </div>
+
+        <div data-errors-for="email">
+          <small class="form-error"
+                 data-errors-when="valueMissing">
+            This field is required.
+          </small>
+
+          <small class="form-error"
+                 data-errors-when="typeMismatch">
+            Please enter a valid email address.
+          </small>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="password" class="form-label">
+          Password
+        </label>
+
+        <div class="form-addon" data-states-for="password">
+          <div class="form-addon__addon">
+            <span class="icon-password"></span>
+          </div>
+
+          <input type="password"
+                 id="userpass"
+                 name="password"
+                 class="form-input"
+                 placeholder="********"
+                 minlength="6"
+                 required>
+
+
+        </div>
+
+        <div data-errors-for="password">
+          <small class="form-error"
+                 data-errors-when="valueMissing">
+            This field is required.
+          </small>
+
+          <small class="form-error"
+                 data-errors-when="tooShort">
+            Your password should be at least 6 characters long.
+          </small>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <button type="submit" class="button" id="btnLogIn">Log in</button>
+        <div class="account" style="padding-right: 0px; padding-top: 10px; color: #efefef;">
+          <p1>  Don't have an account?<span style="font-weight: 700;"><a href="signup.html"> Sign up</a></span></p1>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>
+<script type="text/javascript" src="js/GentleForm.js"></script>
+
+    <script src="js/login.js"></script>
+
+</body>
+</html>

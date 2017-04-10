@@ -1,0 +1,60 @@
+ #map {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 500px;
+  width: 100vw;
+}
+
+#search {
+  display: block;
+  position: relative;
+  top: 55px;
+  z-index: 2;
+  left: 5px;
+}
+.esriSimpleSliderTL {
+    top: 20px;
+    left: 20px;
+    display: none;
+}
+
+@media screen and (max-height: 570px) {
+  #map {
+   position: relative;
+   padding: 0;
+   margin: 0;
+   height: 300px;
+   width: 100vw;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  #map {
+   position: relative;
+   padding: 0;
+   margin: 0;
+   height: 360px;
+   width: 100vw;
+ }
+}
+
+@media screen and (max-height: 670px) {
+  #map {
+   position: relative;
+   padding: 0;
+   margin: 0;
+   height: 400px;
+   width: 100vw;
+ }
+}
+
+@media screen and (max-height: 740px) {
+  #map {
+   position: relative;
+   padding: 0;
+   margin: 0;
+   height: 380px;
+   width: 100vw;
+ }
+}
