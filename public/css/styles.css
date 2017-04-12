@@ -10,6 +10,8 @@
 1.0 Config
 --------------------------------------------------------------*/
 /*! sanitize.css | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
+
+
 pre, textarea {
   overflow: auto; }
 
@@ -55,7 +57,9 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  vertical-align: middle;
+  }
 
 ::after, ::before {
   text-decoration: inherit;
@@ -533,12 +537,31 @@ li {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 5px;
+    transform: scale(0.7);
     text-align: center;
   }
     @media (max-width: 900px) {
       .slider__holder {
         max-width: 540px; } }
+
+    @media (max-width: 600px) {
+      .slider__holder {
+        margin-top: 60px;
+        }
+       }
+
+   @media (max-width: 350px) {
+     .slider__holder {
+       margin-top: 60px;
+       transform: scale(0.9);
+       }
+      .heading-2{
+        font-size: 33px;
+        line-height: 10px;
+      }
+    }
+
     @media (max-width: 600px) {
       .slider__holder {
         margin-top: 60px;
@@ -576,12 +599,10 @@ li {
   height: 10px;
   height: 10px;
   margin: 0 auto;
-  margin-top: 48px;
+  margin-top: -80px;
   margin-bottom: 56px;
   text-align: center; }
-  @media (max-width: 600px) {
-    .bullets {
-      margin-top: 32px; } }
+
   .bullets__item {
     display: inline-block;
     width: 10px;
@@ -599,7 +620,6 @@ li {
 .section {
   position: relative;
   width: 100%;
-  padding: 120px 24px;
   text-align: center; }
   .section__entry {
     width: 100%;
@@ -620,7 +640,7 @@ li {
   display: inline-block;
   height: 42px;
   margin-top: 30px;
-  padding: 11px 16px;
+  padding: 12.5px 16px;
   font-weight: 500;
   line-height: 20px;
   color: #FFF;
@@ -630,6 +650,12 @@ li {
   .button:hover {
     background: rgb(80, 80, 205);
     color: white;
+  }
+  #redirect {
+    background:#2cd22c;
+  }
+  #redirect:hover {
+    background:#2ac12a;
   }
 
 /*--------------------------------------------------------------
@@ -716,3 +742,13 @@ li {
     text-transform: uppercase; }
     .labs-bar__button:hover {
       background: rgba(0, 0, 0, 0.1); }
+
+      @media (max-width: 600px) {
+        .bullets {
+          margin-top: 32px; }
+        .section__entry {
+          margin-top: 100px;
+          margin-bottom: 0;
+        }
+
+      }

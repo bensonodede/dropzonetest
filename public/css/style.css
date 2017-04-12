@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-  font-size: 52px;
+  font-size: 45px;
   line-height: 52px;
   margin-bottom: 64px;
 }
@@ -192,8 +192,8 @@ input[type="email"]:focus {
   left: 0;
   top: 0;
   width: 100%;
-  padding: 44px 0;
-  font-size: 16px;
+  padding: 23px 0;
+  font-size: 14px;
   z-index: 40;
   background-color: transparent;
   webkit-transition: all 0.37s cubic-bezier(0, 0, 0.58, 1);
@@ -403,7 +403,7 @@ input[type="email"]:focus {
 
 #main-nav.active {
   background-color: #ffffff;
-  padding: 24px 0;
+  padding: 12px 0;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
   -ms-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
@@ -442,7 +442,14 @@ input[type="email"]:focus {
 #header .video-btn i {
   margin-right: 15px;
 }
-
+#coverheader{
+  margin-top: 50px;
+}
+@media only screen and (max-width: 575px){
+  #coverheader{
+    margin-top: 10px;
+  }
+}
 /*****************************************************
 *** Features ***
 *****************************************************/
@@ -1218,7 +1225,7 @@ Responsive Styles
   }
   /*** Customers ***/
   #customers {
-    padding: 150px 0;
+    padding: 100px 0;
   }
   #customers .carousel-indicators li {
     width: 90px;

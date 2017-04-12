@@ -28,7 +28,7 @@ function locateme() {
         });
     });
 }
-  locateme();
+//  locateme();
 
 function spitloc() {
   socket.on('getw3w', function (data) {
@@ -36,4 +36,4 @@ function spitloc() {
       document.getElementById('w3w').innerHTML = data.w3w;
     });
 }
-spitloc();
+//spitloc();
