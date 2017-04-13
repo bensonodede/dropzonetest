@@ -973,7 +973,10 @@ input[type="email"]:focus {
   padding-top: 20px;
   padding-bottom: 25px;
 }
-
+#navlogo {
+  width:100px;
+  height: 22px;
+}
 #footer .logo {
   margin-bottom: 36px;
 }

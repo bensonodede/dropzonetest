@@ -333,11 +333,7 @@ li {
 /*--------------------------------------------------------------
 2.0 Cards
 --------------------------------------------------------------*/
-@media (max-width: 400px) {
-  .dem-planets{
-    padding-top: 0px;
-  }
-}
+
 .slider__item {
   transition: all 0.2s ease; }
   #slide-1:checked ~ .slider__holder .slider__item--1 {
@@ -541,33 +537,9 @@ li {
     transform: scale(0.7);
     text-align: center;
   }
-    @media (max-width: 900px) {
-      .slider__holder {
-        max-width: 540px; } }
 
-    @media (max-width: 600px) {
-      .slider__holder {
-        margin-top: 60px;
-        }
-       }
 
-   @media (max-width: 350px) {
-     .slider__holder {
-       margin-top: 60px;
-       transform: scale(0.9);
-       }
-      .heading-2{
-        font-size: 33px;
-        line-height: 10px;
-      }
-    }
 
-    @media (max-width: 600px) {
-      .slider__holder {
-        margin-top: 60px;
-
-        }
-       }
   .slider__item {
     position: absolute;
     top: 0;
@@ -583,9 +555,7 @@ li {
     @media (max-width: 600px) {
       .slider__item-content {
         padding: 32px 32px; } }
-    @media (max-width: 375px) {
-      .slider__item-content {
-        padding: 40px 24px; } }
+
   .slider__item-text {
     padding: 60px 0; }
 
@@ -653,11 +623,15 @@ li {
   }
   #redirect {
     background:#2cd22c;
+    padding: 9.5px 16px;
   }
   #redirect:hover {
     background:#2ac12a;
   }
-
+  #donebutton{
+    padding-top: 8px;
+    text-decoration: none;
+  }
 /*--------------------------------------------------------------
 4.0 All Tutorials
 --------------------------------------------------------------*/
@@ -752,3 +726,84 @@ li {
         }
 
       }
+
+
+      /* TABLETS */
+      @media (max-width: 900px) {
+        .slider__holder {
+          max-width: 540px; } }
+
+      /*IPHONE 6 PLUS ** NEXUS 6P ** NEXUS 5X*/
+      @media (max-width: 460px) {
+        .slider__holder {
+          margin-top: 60px;
+          }
+         }
+         /*IPHONE 6 ** GALAXY S5*/
+         @media (max-width: 420px) {
+           .slider__holder {
+             margin-top: 60px;
+           }
+         }
+
+         /*IPHONE 5* ** LUMIA 520 */
+         @media (max-width: 380px) {
+           .slider__holder {
+             margin-top: 60px;
+             transform: scale(0.9);
+            }
+            .heading-2{
+              font-size: 33px;
+              line-height: 10px;
+            }
+            .slider__item-content {
+              padding: 0px 24px;
+            }
+            #slide-1:checked ~ .slider__holder .slider__item--1{
+              transform: scale(0.9);
+            }
+            #slide-2:checked ~ .slider__holder .slider__item--2{
+              transform: scale(0.9);
+            }
+            #slide-3:checked ~ .slider__holder .slider__item--3{
+              transform: scale(0.9);
+            }
+            #redirect{
+              padding: 9.5px 16px;
+            }
+            .bullets{
+              margin-top: -45px;
+            }
+            .illustration1{
+              position: relative;
+              padding-top: 260px;
+              top: 80px;
+            }
+            .illustration2{
+              position: relative;
+              padding-top: 250px;
+              left: -20px;
+            }
+            .illustration3{
+              position: relative;
+              padding-top: 250px;
+              top: 68px;
+            }
+            .heading-3{
+              padding-top: 10px
+            }
+            .night-sky{
+              width: 135%;
+              height: 165%;
+              left: -68px;
+            }
+            .stars-container{
+              position: relative;
+              width: 23%;
+              left: 20%;
+              top: -280px;
+            }
+            .random-stars-container .random-stars:nth-child(4){
+              top: 145px;
+            }
+          }
