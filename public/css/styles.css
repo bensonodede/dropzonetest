@@ -731,14 +731,49 @@ li {
       /* TABLETS */
       @media (max-width: 900px) {
         .slider__holder {
-          max-width: 540px; } }
+          max-width: 540px;
+          padding-bottom: 70px;
+          transform: scale(0.9);
+        }
+
+
+       }
+
+
+
 
       /*IPHONE 6 PLUS ** NEXUS 6P ** NEXUS 5X*/
-      @media (max-width: 460px) {
+      @media (max-width: 475px) {
         .slider__holder {
           margin-top: 60px;
+          transform: scale(0.9);
+          }
+          .bullets{
+            margin-top: -7px;
+          }
+          .illustration2{
+            position: relative;
+            top: 70px;
+          }
+          .illustration3{
+            position: relative;
+            top: 180px;
+            transform:scale(1.1);
+          }
+          .stars-container{
+            left: -15%;
+          }
+          .random-stars-container{
+            height: 250px;
+          }
+          .glow:nth-child(4) .smile{
+            top: 39px;
           }
          }
+
+
+
+
          /*IPHONE 6 ** GALAXY S5*/
          @media (max-width: 420px) {
            .slider__holder {
@@ -773,7 +808,7 @@ li {
          @media (max-width: 380px) {
            .slider__holder {
              margin-top: 60px;
-             transform: scale(1);
+             transform: scale(0.9);
             }
 
             .heading-2{
