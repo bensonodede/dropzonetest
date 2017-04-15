@@ -206,7 +206,7 @@ io.on('connection', function(socket) {
       to: data.recNumber,// Recipient's number goes here
       //to: "+254716305157",
       from: "+16466797502",
-      body: data.senderName + " wants to send you a package" + " click the link below to confirm" + "\n" + "https://www.dropzone.co.ke/confirm/" + data.token
+      body: data.senderName + " wants to send you a package" + " click the link below to confirm" + "\n" + "https://dropzoneapp.herokuapp.com/confirm/" + data.token
     }, function(err, message) {
     console.log(err);
   });*/
