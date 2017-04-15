@@ -120,6 +120,12 @@ btnShip.addEventListener('click', e => {
               /***** Save unique id to database *****/
               firebase.database().ref('token/' + token).set({
                 recNumber: number
+              })
+              .then(function() {
+                console.log("Unique ID write success");
+              })
+              .catch(function() {
+                console.log(error);
               });
 
 

@@ -977,6 +977,10 @@ input[type="email"]:focus {
   width:100px;
   height: 22px;
 }
+#sidemenulogo{
+  width: 100px;
+  height: 22px;
+}
 #footer .logo {
   margin-bottom: 36px;
 }

@@ -67,7 +67,8 @@ app.get('/confirm/:token', function(req, res){
     }
     else {
       res.sendFile(__dirname + '/public/confirm.html');
-      var recNum = snapshot.val().number;
+      var recNum = snapshot.val().recNumber;
+      console.log("DROPOFF TEXT");
       console.log(recNum);
       //Get address
       io.on('connection', function (socket){
@@ -76,7 +77,7 @@ app.get('/confirm/:token', function(req, res){
           w3w.reverse({
             coords:data.address
           }).then(function(response){
-            console.log(response);
+              console.log(response);
 
             //Send dropoff info to courier
       /*    client.messages.create({
@@ -146,6 +147,7 @@ firebase.initializeApp(config);
 
 
 // socket to get coords and display on homepage
+/*
 io.on('connection', function (socket) {
   socket.on('getcoords', function (data) {
     w3w.reverse({
@@ -158,6 +160,8 @@ io.on('connection', function (socket) {
     });
   });
 });
+*/
+
 
 //socket to get recipient's form details
 io.on('connection', function(socket) {
@@ -166,6 +170,7 @@ io.on('connection', function(socket) {
 
   /**** PICKUP ****/
   socket.on('pickup', function (data) {
+    console.log("PICKUP TEXT");
     console.log(data.senderName);
     console.log(data.senderNum);
 
@@ -174,13 +179,15 @@ io.on('connection', function(socket) {
     }).then(function(response) {
       console.log(response);
 
-     client.messages.create({
+      //Pickup text
+     /*client.messages.create({
           to: "+254724645546",//Courier number(s) go here
           from: "+16466797502",
-          body: "PICKUP at " + "\n" + response + "\n" + "Name: " + data.senderName + "\n" + "Contact: " + data.senderNumb,
+          body: "PICKUP at " + "\n" + response + "\n" + "Name: " + data.senderName + "\n" + "Contact: " + data.senderNum,
         }, function(err, message) {
            console.log(err);
-         });
+         });*/
+         //End pickup text
         socket.emit('complete', {
           status: "Done."
         });
@@ -190,17 +197,20 @@ io.on('connection', function(socket) {
 
     /***** RECIPIENT TEXT *****/
     socket.on('recipient', function (data) {
+     console.log("RECIPIENT TEXT");
       console.log(data.recNumber);
       console.log(data.senderName);
       console.log(data.token);
-    client.messages.create({
+      //Confirm text
+    /*client.messages.create({
       to: data.recNumber,// Recipient's number goes here
       //to: "+254716305157",
       from: "+16466797502",
       body: data.senderName + " wants to send you a package" + " click the link below to confirm" + "\n" + "https://www.dropzone.co.ke/confirm/" + data.token
     }, function(err, message) {
     console.log(err);
-    });
+  });*/
+    //End confirm text
   });
   /***** END RECIPIENT TEXT *****/
 

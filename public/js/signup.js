@@ -9,9 +9,6 @@ GentleForm(form, function (event) {
 
   if (this.isValid()) {
     addToast('success', 'Yay, the form is valid!');
-    setTimeout(function redirect() {
-      window.location.href = "send.html";
-    }, 4000)
   }
   else addToast('error', 'Oops, the form is invalid.');
 });
@@ -83,6 +80,11 @@ var btnLogIn = document.getElementById('btnLogIn');
       var number = usernumber.value;
 
 
+
+
+
+
+
       firebase.auth().createUserWithEmailAndPassword(email, pass).then(function(user) {
        var root = firebase.database().ref();
        var uid = user.uid;
@@ -90,9 +92,18 @@ var btnLogIn = document.getElementById('btnLogIn');
        firebase.database().ref('users/' + uid).set({
         name: name,
         number: number
-       });
+      })
+      .then(function() {
+        console.log("Sync success");
+        window.location.href = "send.html";
+      })
+      .catch(function() {
+        console.log("Sync failed");
+      });
 
      }).catch(e => console.log(e.message));
+
+
 
 
   });
