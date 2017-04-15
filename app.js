@@ -80,13 +80,13 @@ app.get('/confirm/:token', function(req, res){
               console.log(response);
 
             //Send dropoff info to courier
-      /*    client.messages.create({
+            client.messages.create({
             to: "+254724645546",//Courier number(s) go here
             from: "+16466797502",
             body: "DROPOFF at" + "\n" + response + "\n" + "Contact: " + recNum
             }, function(err, message) {
             console.log(err);
-            });*/
+            });
             //End dropoff info
 
           });
@@ -180,13 +180,13 @@ io.on('connection', function(socket) {
       console.log(response);
 
       //Pickup text
-     /*client.messages.create({
+      client.messages.create({
           to: "+254724645546",//Courier number(s) go here
           from: "+16466797502",
           body: "PICKUP at " + "\n" + response + "\n" + "Name: " + data.senderName + "\n" + "Contact: " + data.senderNum,
         }, function(err, message) {
            console.log(err);
-         });*/
+         });
          //End pickup text
         socket.emit('complete', {
           status: "Done."
@@ -202,14 +202,14 @@ io.on('connection', function(socket) {
       console.log(data.senderName);
       console.log(data.token);
       //Confirm text
-    /*client.messages.create({
+    client.messages.create({
       to: data.recNumber,// Recipient's number goes here
       //to: "+254716305157",
       from: "+16466797502",
       body: data.senderName + " wants to send you a package" + " click the link below to confirm" + "\n" + "https://dropzoneapp.herokuapp.com/confirm/" + data.token
     }, function(err, message) {
     console.log(err);
-  });*/
+  });
     //End confirm text
   });
   /***** END RECIPIENT TEXT *****/
