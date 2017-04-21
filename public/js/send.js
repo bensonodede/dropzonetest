@@ -12,6 +12,22 @@ var socket = io();
 
 
 
+function success(position) {
+  console.log(position.coords);
+}
+
+function error(msg) {
+  alert("Dropzone wants to use your location, but first you need to go to Settings and enable Location.")
+  console.log(msg);
+}
+
+
+if (navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(success, error);
+}else {
+  console.error('not supported');
+}
+
 var recNumber = document.getElementById('recNumber');
 var btnShip = document.getElementById('ship');
 var logoutLink2 = document.getElementById('logoutLink2');
