@@ -81,7 +81,7 @@ app.get('/confirm/:token', function(req, res){
 
             //Send dropoff info to courier
           client.messages.create({
-            to: "+254724645546",//Courier number(s) go here
+            to: "+254716305157",//Courier number(s) go here
             from: "+16466797502",
             body: "DROPOFF at" + "\n" + response + "\n" + "Contact: " + recNum
             }, function(err, message) {
